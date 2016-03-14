@@ -1,0 +1,43 @@
+<ion-view id="contactus-page">
+<ion-header-bar class="bar-positive" align-title="center">
+    <h1 class="title">Contact Us</h1>
+    <!-- <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div> -->
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="contactus(frm)" novalidate name="frm" id="frm">
+      <div class="list">
+
+        <label class="item item-input item-floating-label" ng-class="{'has-error': frm.name.$error.required && frm.$submitted}">
+		    <span class="input-label">Name:</span>
+		    <input type="text" placeholder="Name" ng-model="user.name" required="" name="name">
+		</label>
+
+		<label class="item item-input item-floating-label" ng-class="{'has-error': frm.mobilenumber.$error.required && frm.$submitted}">
+		    <span class="input-label">Mobile No:</span>
+		    <input type="number" placeholder="Mobile No" ng-model="user.mobileno" required name="mobilenumber">
+		</label>
+
+		<label class="item item-input item-floating-label" ng-class="{'has-error': frm.uemail.$error.required && frm.$submitted}">
+		    <span class="input-label">Email Address:</span>
+		    <input type="email" placeholder="Email Address" ng-model="user.email" required name="uemail">
+		</label>
+
+		<label class="item item-input item-floating-label" ng-class="{'has-error': frm.address.$error.required && frm.$submitted}">
+		    <span class="input-label">Address:</span>
+		    <input type="text" placeholder="Address" ng-model="user.address" required name="address"> 
+		</label>
+
+		<label class="item item-input item-floating-label" ng-class="{'has-error': frm.msg.$error.required && frm.$submitted}">
+		    <span class="input-label">Message</span>
+		    <input type="text" placeholder="Message" ng-model="user.message" required name="msg">
+		</label>
+
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

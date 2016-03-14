@@ -1,0 +1,29 @@
+<ion-view>
+<ion-header-bar class="bar-positive" align-title="center">
+    <h1 class="title">Gallery</h1>
+    <!-- <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div> -->
+  </ion-header-bar>
+   <ion-content class="has-header padding" ng-controller="GalleryCtrl">
+        <br><br>
+
+        <div class="item item-divider">
+          <i class="ion-images"></i>
+          Baggi-Photos
+        </div>
+
+        <a class="item item-list-detail">
+          <ion-scroll direction="x">
+            <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+          </ion-scroll>
+        </a>
+
+        
+
+        <button class="button button-block button-positive" ng-click="playVideo()">
+          Video
+        </button>
+
+      </ion-content>
+</ion-view>
